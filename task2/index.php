@@ -8,8 +8,10 @@ define("DBHOST", "localhost");    // адрес сервера
 $db_server = mysql_connect(DBHOST, DBUSER, DBPASS) or die(mysql_error());
 mysql_select_db(DBNAME) or die(mysql_error());
 
-$query = "INSERT INTO task2('ID', 'name', 'description') VALUE('1', 'name1','description') ;
+for($i=0; $i<5; $i++)
+{
+$query = "INSERT INTO task2(ID, name, description) VALUE('$i', 'name $i','description $i') ;
 mysql_query($query);
-
+}
 
 ?>
