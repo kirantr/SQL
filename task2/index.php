@@ -8,6 +8,7 @@ define("DBHOST", "localhost");    // адрес сервера
 $db_server = mysql_connect(DBHOST, DBUSER, DBPASS) or die(mysql_error());
 mysql_select_db(DBNAME) or die(mysql_error());
 
+<<<<<<< HEAD
     for($i=0; $i<5; $i++)
     {
 //        $query = "INSERT INTO task2(ID, name, description) VALUE('$i', 'name$i','description$i')" ;
@@ -24,5 +25,15 @@ while ($row = mysql_fetch_row($result, MYSQL_ASSOC))
          echo $row['description'] . '<br>';
 
      }
+=======
+for($i=0; $i<5; $i++)
+{
+$query = "INSERT INTO task2(ID, name, description) VALUE('$i', 'name $i','description $i') ;
+mysql_query($query);
+}
+$query2 = "SELECT * FROM task2";
+mysql_query($query);
+>>>>>>> ad542af517422f7370c58fee4430592b362b2a7b
 
 ?>
+
