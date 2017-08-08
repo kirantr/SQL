@@ -13,5 +13,8 @@ for($i=0; $i<5; $i++)
 $query = "INSERT INTO task2(ID, name, description) VALUE('$i', 'name $i','description $i') ;
 mysql_query($query);
 }
+$query2 = "SELECT * FROM task2";
+mysql_query($query);
 
 ?>
+
